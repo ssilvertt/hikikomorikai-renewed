@@ -1,40 +1,44 @@
-{
-  "products": [
-    {
-      "name": "''Battalion of Bastards'' Longsleeve",
-      "price": 8000,
-      "description": "",
-      "image_url": "https://static.tildacdn.com/stor6366-6437-4565-b235-623662643138/11216110.png"
-    },
-    {
-      "name": "t-shirt gen'ei ryodan",
-      "price": 3000,
-      "description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor",
-      "image_url": "https://static.tildacdn.com/tild6665-3932-4435-a139-663465393531/uHuPYuNAw-Q.jpg"
-    },
-    {
-      "name": "longsleeve gen'ei ryodan",
-      "price": 6000,
-      "description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor. ",
-      "image_url": "https://static.tildacdn.com/tild3235-6237-4261-a536-643239636238/MBJZz6HpWiQ.jpg"
-    },
-    {
-      "name": "hoodie Gen'ei Ryodan",
-      "price": 1000,
-      "description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor.",
-      "image_url": "https://static.tildacdn.com/tild6530-6332-4335-a431-313062393534/oiAwW_bzOTo.jpg"
-    },
-    {
-      "name": "t-shirt the hate",
-      "price": 3000,
-      "description": "so much hate for me everywhere today, can't figure out what i did to cause it... i am trying to ovrercome, to overcome it all.",
-      "image_url": "https://static.tildacdn.com/tild3532-3038-4539-a165-396237666365/Msp3S7Ehg6g.jpg"
-    },
-    {
-      "name": "longsleeve 1'm tired of my uselessness",
-      "price": 7000,
-      "description": "so much hate for me everywhere today, can't figure out what i did to cause it... i am trying to ovrercome, to overcome it all.",
-      "image_url": "https://static.tildacdn.com/tild6432-3832-4566-a235-333237653062/G0bTrrkVHHY.jpg"
-    }
-  ]
-}
+[
+	{
+    "id": 1,
+		"name": "''Battalion of Bastards'' Longsleeve",
+		"price": 8000,
+		"description": "",
+		"image_url": "https://static.tildacdn.com/stor6366-6437-4565-b235-623662643138/11216110.png"
+	},
+	{
+    "id": 2,
+		"name": "t-shirt gen'ei ryodan",
+		"price": 3000,
+		"description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor",
+		"image_url": "https://static.tildacdn.com/tild6665-3932-4435-a139-663465393531/uHuPYuNAw-Q.jpg"
+	},
+	{
+    "id": 3,
+		"name": "longsleeve gen'ei ryodan",
+		"price": 6000,
+		"description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor. ",
+		"image_url": "https://static.tildacdn.com/tild3235-6237-4261-a536-643239636238/MBJZz6HpWiQ.jpg"
+	},
+	{
+    "id": 4,
+		"name": "hoodie Gen'ei Ryodan",
+		"price": 1000,
+		"description": "Gen'ei Ryodan 幻影旅団 also known as Spiders is a Class A criminal organization of 13 people, originated in the City of the Fallen Star Meteor.",
+		"image_url": "https://static.tildacdn.com/tild6530-6332-4335-a431-313062393534/oiAwW_bzOTo.jpg"
+	},
+	{
+    "id": 4,
+		"name": "t-shirt the hate",
+		"price": 3000,
+		"description": "so much hate for me everywhere today, can't figure out what i did to cause it... i am trying to ovrercome, to overcome it all.",
+		"image_url": "https://static.tildacdn.com/tild3532-3038-4539-a165-396237666365/Msp3S7Ehg6g.jpg"
+	},
+	{
+    "id": 5,
+		"name": "longsleeve 1'm tired of my uselessness",
+		"price": 7000,
+		"description": "so much hate for me everywhere today, can't figure out what i did to cause it... i am trying to ovrercome, to overcome it all.",
+		"image_url": "https://static.tildacdn.com/tild6432-3832-4566-a235-333237653062/G0bTrrkVHHY.jpg"
+	}
+]
