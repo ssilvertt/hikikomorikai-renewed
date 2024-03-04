@@ -23,12 +23,12 @@ export default function Header() {
 							</Link>
 						</li>
 						<li>
-							<Link
-								href='/product/2'
+							<a
+								href='https://t.me/silvert'
 								className='hover:text-red-600 transition-all'
 							>
 								Contact
-							</Link>
+							</a>
 						</li>
 					</ul>
 					<ul className='flex max-sm:ml-auto max-sm:gap-5 md:gap-10 font-raleway'>
