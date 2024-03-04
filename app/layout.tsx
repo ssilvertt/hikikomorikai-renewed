@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter, Raleway } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import Header from './ui/header';
 
 const hikika = localFont({ src: '../public/OldLondon.ttf', display: 'swap' });
 const raleway = Raleway({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-raleway',
-})
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-raleway',
+});
 const hikka = localFont({
-  src: '../public/OldLondon.ttf',
-  display: 'swap',
-  variable: '--font-hikka'
-})
+	src: '../public/OldLondon.ttf',
+	display: 'swap',
+	variable: '--font-hikka',
+});
 
 export const metadata: Metadata = {
 	title: 'hikikomori kai',
@@ -29,8 +29,10 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={`${raleway.variable} ${hikka.variable}`}>
 			<body className={hikika.className}>
-				<Header />
-				<main className='mt-20 flex h-full min-h-screen flex-col'>{children}</main>
+					<Header />
+					<main className='mt-20 flex h-full min-h-screen flex-col'>
+						{children}
+					</main>
 			</body>
 		</html>
 	);
