@@ -11,6 +11,7 @@ const config: Config = {
 			fontFamily: {
 				raleway: ['var(--font-raleway)'],
 				hikika: ['var(--font-hikka)'],
+				hikikaruss: ['var(--font-hikkarus)']
 			}
 		},
 	},

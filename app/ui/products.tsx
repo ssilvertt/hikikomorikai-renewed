@@ -8,6 +8,7 @@ interface Product {
 	price: number;
 	description: string;
 	image_url: string;
+	second_image_url: string;
 }
 
 interface ProductsProps {
@@ -15,7 +16,6 @@ interface ProductsProps {
 }
 
 export default function Products({ products }: ProductsProps) {
-
 	return (
 		<div className='flex flex-wrap justify-center gap-24'>
 			{products.map((product, index) => (

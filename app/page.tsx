@@ -6,6 +6,7 @@ interface Product {
 	price: number;
 	description: string;
 	image_url: string;
+	second_image_url: string;
 }
 
 export default async function Home() {
