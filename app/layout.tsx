@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className={`${raleway.variable} ${hikka.variable} ${hikkarus.variable}`}>
-			<body className={hikika.className}>
+			<body >
 					<Header />
 					<main className='mt-20 flex h-full min-h-screen flex-col'>
 						{children}
