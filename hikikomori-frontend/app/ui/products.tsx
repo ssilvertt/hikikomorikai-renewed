@@ -17,7 +17,7 @@ interface ProductsProps {
 
 export default function Products({ products }: ProductsProps) {
 	return (
-		<div className='flex flex-wrap justify-center gap-24'>
+		<div className='flex flex-wrap justify-center gap-24 '>
 			{products.map((product, index) => (
 				<Link key={index} href={`/product/${product.id}`}>
 					<div

@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 		return (
 			<div className='flex h-full min-h-screen flex-col'>
 				<div className='relative z-20'>
-					<section className='relative mx-auto flex max-w-6xl flex-col px-6 md:px-4 lg:px-8'>
+					<section className='relative mx-auto flex max-w-6xl flex-col px-6 md:px-4'>
 						<div className='grid-cols-2 gap-20 pt-32 px-5 md-px-32 md:grid md:min-h-[1200px] md:px-32'>
 							<div className='z-1 relative md:w-full'>
 								<Image
@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 							</div>
 							<div className='my-14 relative'>
 								<div className='sticky top-32'>
-									<h1 className='md:text-right font-raleway text-4xl md:text-4xl text-center text-red-700'>
+									<h1 className='text-center md:text-right  font-raleway text-4xl md:text-4xl  text-red-700'>
 										{product.name}
 									</h1>
 									<p className='mt-10 leading-[1.6em] text-center font-raleway md:text-right'>
