@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
-import Header from './ui/header';
+import Header from '../components/ui/header';
 const hikika = localFont({ src: '../public/OldLondon.ttf', display: 'swap' });
 const raleway = Raleway({
 	subsets: ['latin'],
