@@ -19,13 +19,21 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',  // Validate image upload
         ]);
 
         $product = new Product([
             'name' => $request->get('name'),
             'description' => $request->get('description'),
             'price' => $request->get('price'),
+            'image' => $request->get('image'),
         ]);
+
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('products', 'public');  // Store image in 'storage/app/public/products' directory
+            $product->image = $imagePath;
+        }
 
         $product->save();
 

@@ -26,7 +26,7 @@ class AuthenticatedSessionController extends Controller
 
         // Explicitly cast $user to an instance of User...
         $user = $user instanceof User ? $user : null;
-
+        
         if ($user) {
             // Generate a new token for the user...
             $token = $user->createToken('token-name');

@@ -10,6 +10,9 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { promises as fs } from 'fs';
 import Image from 'next/image';
+
+
+
 export default async function Page({ params }: { params: { id: string } }) {
 	const file = await fs.readFile(
 		process.cwd() + '/public/products.json',
