@@ -22,16 +22,20 @@ export type User = {
     updated_at: string
 }
 
-export type DropdownProps = {
-    align?: 'left' | 'top' | 'right';
-    width?: number | string;
-    contentClasses?: string;
-    trigger: React.ReactNode;
-    children: React.ReactNode;
+export type ApiProduct = {
+	id: number;
+	name: string;
+	description: string;
+	price: string;
+	images: Image[];
+	created_at:string;
+	updated_at:string;
 }
 
-export type NavLinkProps = {
-    active?: boolean;
-    href: string;
-    [key: string]: any;
+export type Image = {
+  id: number;
+  product_id: number;
+  image_path: string;
+  created_at: string;
+  updated_at: string;
 }

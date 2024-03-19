@@ -5,8 +5,18 @@ const nextConfig = {
 			{
 				protocol: "https",
 				hostname: "static.tildacdn.com",
-				
+			},
+			{
+				protocol: "http",
+				hostname: "localhost",
+				port: "8000",
+			},
+			{
+				protocol: 'https',
+				hostname: "",
 			}
+
+			
 		]
 	}
 };
