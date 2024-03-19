@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\Storage;
 class Product extends Model
 {
     use HasFactory;
@@ -13,11 +13,11 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'image',
     ];
 
     
-    protected $casts = [
-        'image' => 'array',
-    ];
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
 }
