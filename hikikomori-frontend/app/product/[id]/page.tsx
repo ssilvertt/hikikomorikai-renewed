@@ -1,37 +1,32 @@
-interface Product {
-	id: number;
-	name: string;
-	price: number;
-	description: string;
-	image_url: string;
-	second_image_url: string;
-}
-import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { promises as fs } from 'fs';
 import Image from 'next/image';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
 
+async function getProduct(id: string) {
+	const res = await fetch(`http://127.0.0.1:8000/api/products/${id}`);
 
+	if (!res.ok) {
+		throw new Error('Failed to fetch data');
+	}
+
+	return res.json();
+}
 
 export default async function Page({ params }: { params: { id: string } }) {
-	const file = await fs.readFile(
-		process.cwd() + '/public/products.json',
-		'utf8'
-	);
-	const data: Product[] = JSON.parse(file);
-	const product = data.find(item => item.id === Number(params.id));
-	if (product) {
-		return (
-			<div className='flex h-full min-h-screen flex-col'>
+	const product = await getProduct(params.id);
+
+	return (
+		<div className='flex h-full min-h-screen flex-col'>
 				<div className='relative z-20'>
 					<section className='relative mx-auto flex max-w-6xl flex-col px-6 md:px-4'>
 						<div className='grid-cols-2 gap-20 pt-32 px-5 md-px-32 md:grid md:min-h-[1200px] md:px-32'>
 							<div className='z-1 relative md:w-full'>
 								<Image
-									src={product.image_url}
+									src={`http://localhost:8000/storage/${product.images[0].image_path}`}
 									alt={product.name}
 									width={500}
 									height={500}
+									unoptimized={true}
 								/>
 							</div>
 							<div className='my-14 relative'>
@@ -43,7 +38,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 										{product.description}
 									</p>
 									<div className='text-4xl font-bold md:text-right text-center font-hikika'>
-										{(product.price / 90.5).toFixed(0)}$
+										{( product.price)}$
 									</div>
 									<div className='mt-3'>
 										<RadioGroup
@@ -71,8 +66,5 @@ export default async function Page({ params }: { params: { id: string } }) {
 					</section>
 				</div>
 			</div>
-		);
-	} else {
-		return <div>Error</div>;
-	}
+	);
 }
