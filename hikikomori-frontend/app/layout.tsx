@@ -1,25 +1,28 @@
+import { ThemeProvider } from '@/components/theme-provider';
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Shippori_Mincho } from 'next/font/google';
 import localFont from 'next/font/local';
-import './globals.css';
 import Header from '../components/ui/header';
-const hikika = localFont({ src: '../public/OldLondon.ttf', display: 'swap' });
+import './globals.css';
+
 const raleway = Raleway({
 	subsets: ['latin'],
 	display: 'swap',
 	variable: '--font-raleway',
 });
+
+const shippori = Shippori_Mincho({
+	weight: ['400', '500', '600', '700'],
+	display: 'swap',
+	variable: '--font-shippori',
+});
+
 const hikka = localFont({
 	src: '../public/OldLondon.ttf',
 	display: 'swap',
 	variable: '--font-hikka',
 });
-
-const hikkarus = localFont({
-	src: '../public/cyrillicgoth.ttf',
-	display: 'swap',
-	variable: '--font-hikkarus'
-})
 
 export const metadata: Metadata = {
 	title: 'hikikomori kai',
@@ -31,15 +34,25 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-
-
 	return (
-		<html lang='en' className={`${raleway.variable} ${hikka.variable} ${hikkarus.variable}`}>
-			<body >
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={cn(
+					'font-raleway antialiased',
+					raleway.variable,
+					hikka.variable,
+					shippori.variable
+				)}
+			>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
 					<Header />
-					<main className='mt-20 flex h-full min-h-screen flex-col'>
-					{children}
-					</main>
+					<main className="flex h-full min-h-screen flex-col">{children}</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
