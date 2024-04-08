@@ -1,5 +1,5 @@
-import Dashboard from '@/components/dashboard';
+import DashboardContent from '@/components/dashboard-content';
 
 export default async function DashboardPage() {
-	return <Dashboard />;
+	return <DashboardContent />;
 }
