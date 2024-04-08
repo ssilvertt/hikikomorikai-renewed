@@ -2,7 +2,6 @@
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { motion } from 'framer-motion';
 import AddProductForm from './add-product-form';
-import { TextGenerateEffect } from './ui/text-generate-effect';
 
 export default function DashboardContent() {
 	return (
