@@ -32,9 +32,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        $test = $request->file('images');
         if ($request->hasFile('images')) {
-            $test = '123';
             foreach ($request->file('images') as $image) {
                 $imagePath = $image->store('product_images', 'public');
                 $product->images()->create([
@@ -57,27 +55,38 @@ class ProductController extends Controller
         return response()->json($product);
     }
 
-    public function update(Request $request, string $id)
+    public function update(string $id, Request $request, )
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
-
-        $product = Product::find($id);
+    
         $product = Product::findOrFail($id);
-        $product->update($validatedData);
+    
+        $product->update([
+            'name' => $request->get('name'),
+            'description' => $request->get('description'),
+            'price' => $request->get('price'),
+        ]);
+    
+        // Удаляем все существующие изображения продукта
+        $product->images()->delete();
+    
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $imagePath = $image->store('product_images');
+                $imagePath = $image->store('product_images', 'public');
                 $product->images()->create([
                     'image_path' => $imagePath
                 ]);
             }
         }
-        return response()->json($product->load('images'));
+    
+        $product->load('images');
+    
+        return response()->json($product, 200);
     }
 
     public function destroy(string $id)
