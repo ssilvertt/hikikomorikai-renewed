@@ -4,23 +4,21 @@ const nextConfig = {
 		domains: ['localhost'],
 		remotePatterns: [
 			{
-				protocol: "https",
-				hostname: "static.tildacdn.com",
+				protocol: 'https',
+				hostname: 'static.tildacdn.com',
 			},
 			{
-				protocol: "http",
-				hostname: "localhost",
-				port: "8000",
-				pathname: '/storage/product_images/**'
+				protocol: 'http',
+				hostname: 'localhost',
+				port: '8000',
+				pathname: '/storage/product_images/**',
 			},
 			{
 				protocol: 'https',
-				hostname: "",
-			}
-
-			
-		]
-	}
+				hostname: '',
+			},
+		],
+	},
 };
 
 export default nextConfig;
