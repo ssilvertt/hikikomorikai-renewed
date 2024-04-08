@@ -1,5 +1,4 @@
-'use client'
-
+'use client';
 
 import { useAuth } from '@/hooks/auth';
 import { useSearchParams } from 'next/navigation';
@@ -19,19 +18,19 @@ export default function Login() {
 	const [status, setStatus] = useState<string | null>(null);
 
 	useEffect(() => {
-		const resetParam = searchParams.get('reset')
+		const resetParam = searchParams.get('reset');
 		if (
-				resetParam &&
-				resetParam.length > 0 &&
-				Object.keys(errors).length === 0
+			resetParam &&
+			resetParam.length > 0 &&
+			Object.keys(errors).length === 0
 		) {
-				setStatus(atob(resetParam))
+			setStatus(atob(resetParam));
 		} else {
-				setStatus(null)
+			setStatus(null);
 		}
-})
+	});
 
-const submitForm = async (event: FormEvent<HTMLFormElement>) => {
+	const submitForm = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
 		login({
@@ -43,25 +42,24 @@ const submitForm = async (event: FormEvent<HTMLFormElement>) => {
 		});
 	};
 
-	if(user){
-		
+	if (user) {
 	}
 
 	return (
-		<form onSubmit={submitForm}>
+		<form onSubmit={submitForm} className="mt-20">
 			<input
-				type='email'
-				placeholder='Email'
+				type="email"
+				placeholder="Email"
 				value={email}
 				onChange={e => setEmail(e.target.value)}
 			/>
 			<input
-				type='password'
-				placeholder='Password'
+				type="password"
+				placeholder="Password"
 				value={password}
 				onChange={e => setPassword(e.target.value)}
 			/>
-			<button type='submit'>Login</button>
+			<button type="submit">Login</button>
 		</form>
 	);
 }
