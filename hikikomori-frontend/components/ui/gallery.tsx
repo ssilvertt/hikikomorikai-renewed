@@ -37,8 +37,8 @@ export default function Gallery({ images }: GalleryProps) {
 							width={80}
 							height={80}
 							unoptimized={true}
-							className="h-20 w-20 object-cover rounded-full brightness-50 hover:brightness-125 transition-all
-							shadow-lg shadow-white  "
+							className="h-20 w-20 object-cover rounded-full brightness-50 hover:brightness-150 transition-all
+							drop-shadow-[0_0_2px_#fff] hover:drop-shadow-[0_0_4px_#fff]"
 						/>
 					</a>
 				);
