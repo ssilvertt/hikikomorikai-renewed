@@ -22,7 +22,7 @@ export function ProductContent({ product }: ProductContentProps) {
 				}}
 				className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl font-hikika mt-20 "
 			>
-				<div className="flex flex-row justify-center overflow-hidden -translate-y-32">
+				<div className="flex flex-row justify-center overflow-hidden -translate-y-32 ">
 					<div className="group relative">
 						<Image
 							alt=""
@@ -39,7 +39,7 @@ export function ProductContent({ product }: ProductContentProps) {
 					<div>{product.name}</div>
 					<Gallery images={product.images} />
 					<h2
-						className="scroll-m-20 pb-2 text-xl md:text-3xl font-semibold tracking-tight first:mt-0 font-raleway t"
+						className="scroll-m-20 pb-2 text-xl md:text-3xl font-semibold tracking-tight first:mt-0 font-raleway mt-6"
 						dangerouslySetInnerHTML={{
 							__html: product.description.replace(/\r\n/g, '<br>'),
 						}}
