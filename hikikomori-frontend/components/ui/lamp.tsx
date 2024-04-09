@@ -17,7 +17,6 @@ const useScreenSize = () => {
 			};
 
 			window.addEventListener('resize', handleResize);
-			// Clean up the event listener when the component unmounts
 			return () => {
 				window.removeEventListener('resize', handleResize);
 			};
@@ -38,7 +37,7 @@ export const LampContainer = ({
 	return (
 		<div
 			className={cn(
-				'relative flex min-h-screen h-auto flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-black w-full rounded-md z-0',
+				'relative flex min-h-screen flex-col items-center justify-center overflow-y-scroll overflow-x-hidden bg-black w-full rounded-md z-0',
 				className
 			)}
 		>
@@ -122,7 +121,7 @@ export const LampContainer = ({
 				<div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-black "></div>
 			</div>
 
-			<div className="relative z-50 flex 	flex-col items-center px-5  translate-y-56">
+			<div className="relative z-50 flex 	flex-col items-center px-5 translate-y-56">
 				{children}
 			</div>
 		</div>
