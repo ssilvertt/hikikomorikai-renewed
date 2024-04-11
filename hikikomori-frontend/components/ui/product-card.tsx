@@ -16,7 +16,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 	return (
 		<Link href={`/product/${product.id}`}>
 			<div
-				className="font-raleway item group flex flex-col items-center w-72 "
+				className="font-raleway item group flex flex-col items-center w-72 dark:bg-zinc-900 dark:bg-opacity-30 rounded-lg py-2 px-5"
 				ref={ref => {
 					if (hoverRef.current) return;
 					hoverRef.current = new HoverEffect(ref!);
