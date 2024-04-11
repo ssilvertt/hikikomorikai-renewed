@@ -1,3 +1,4 @@
+import { AuroraBackground } from '@/components/ui/aurora-background';
 import ProductCard from '@/components/ui/product-card';
 import { ApiProduct } from '@/lib/definitions';
 
@@ -17,8 +18,8 @@ export default async function Home() {
 	const products: ApiProduct[] = await getProducts();
 
 	return (
-		<>
-			<div className="z-20">
+		<AuroraBackground>
+			<div className="z-20 ">
 				<div>
 					<div className="mx-auto my-20 flex max-w-7xl flex-col px-4 py-5 sm:px-6 lg:px-8">
 						<div className="flex flex-wrap justify-center gap-20">
@@ -29,6 +30,6 @@ export default async function Home() {
 					</div>
 				</div>
 			</div>
-		</>
+		</AuroraBackground>
 	);
 }
