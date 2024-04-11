@@ -20,9 +20,9 @@ export function ProductContent({ product }: ProductContentProps) {
 					duration: 0.8,
 					ease: 'easeInOut',
 				}}
-				className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl font-hikika mt-20 "
+				className="bg-gradient-to-b from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl font-hikika mt-20 "
 			>
-				<div className="flex flex-row justify-center overflow-hidden -translate-y-32 ">
+				<div className="flex flex-row justify-center -translate-y-32 ">
 					<div className="group relative">
 						<Image
 							alt=""
@@ -44,7 +44,9 @@ export function ProductContent({ product }: ProductContentProps) {
 							__html: product.description.replace(/\r\n/g, '<br>'),
 						}}
 					/>
-					<div className="font-hikika">{Number(product.price).toFixed(0)}$</div>
+					<div className="font-hikika mb-60">
+						{Number(product.price).toFixed(0)}$
+					</div>
 				</div>
 			</motion.div>
 		</LampContainer>
