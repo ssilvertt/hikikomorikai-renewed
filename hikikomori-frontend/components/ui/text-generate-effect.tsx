@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { motion, stagger, useAnimate } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn } from '@/util/utils';
 
 export const TextGenerateEffect = ({
 	words,
@@ -41,16 +41,16 @@ export const TextGenerateEffect = ({
 
 	return (
 		<div>
-			<div className="mt-4">
+			<button>
 				<div
 					className={cn(
-						'text-center md:text-right text-4xl md:text-4xl  text-red-700 font-raleway',
+						'text-center md:text-right text-4xl md:text-4xl mt-1 text-red-700 font-raleway',
 						className
 					)}
 				>
 					{renderWords()}
 				</div>
-			</div>
+			</button>
 		</div>
 	);
 };
