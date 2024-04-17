@@ -1,35 +1,39 @@
 export class HoverEffect {
-	private el: HTMLDivElement;
-	threshold = 20;
-
-	constructor(el: HTMLDivElement) {
-		this.el = el;
-		this.el.addEventListener('mouseenter', this.mouseEnter.bind(this));
-		this.el.addEventListener('mouseleave', this.mouseLeave.bind(this));
-		this.el.addEventListener('mousemove', this.mouseMove.bind(this));
+	constructor(
+		private readonly element: HTMLElement,
+		private readonly threshold = 20
+	) {
+		this.mouseLeave = this.mouseLeave.bind(this);
+		this.mouseMove = this.mouseMove.bind(this);
 	}
-
-	private mouseEnter(): void {
-		this.el.classList.add('over');
+	
+	mount(): void {
+		this.element.addEventListener('mouseleave', this.mouseLeave);
+		this.element.addEventListener('mousemove', this.mouseMove);
 	}
-
+	
+	dispose(): void {
+		this.element.removeEventListener('mouseleave', this.mouseLeave);
+		this.element.removeEventListener('mousemove', this.mouseMove);
+		this.element.style.removeProperty('transform');
+	}
+	
 	private mouseLeave(): void {
-		this.el.classList.remove('over');
-		this.el.style.transform = `perspective(${this.el.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+		this.element.style.transform = `perspective(${this.element.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
 	}
-
+	
 	private mouseMove(event: MouseEvent) {
 		const { clientX, clientY, currentTarget } = event;
 		const { clientWidth, clientHeight, offsetLeft, offsetTop } =
 			currentTarget as HTMLDivElement;
-
+		
 		const horizontal = (clientX - offsetLeft) / clientWidth;
 		const vertical = (clientY - offsetTop) / clientHeight;
-		const rotateY = (vertical * this.threshold - this.threshold / 2).toFixed(2);
-		const rotateX = (this.threshold / 2 - horizontal * this.threshold).toFixed(
+		const rotateX = (vertical * this.threshold - this.threshold / 2).toFixed(2);
+		const rotateY = (this.threshold / 2 - horizontal * this.threshold).toFixed(
 			2
 		);
-
-		this.el.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1.07, 1.07, 1.07)`;
+		
+		this.element.style.transform = `perspective(${clientWidth}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.07, 1.07, 1.07)`;
 	}
 }
