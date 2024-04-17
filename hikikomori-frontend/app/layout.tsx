@@ -1,9 +1,10 @@
 import { ThemeProvider } from '@/components/theme-provider';
-import { cn } from '@/lib/utils';
+import { cn } from '@/util/utils';
 import type { Metadata } from 'next';
 import { Raleway, Shippori_Mincho } from 'next/font/google';
 import localFont from 'next/font/local';
 import Header from '../components/ui/header';
+import {Toaster} from '@/components/ui/toaster'
 import './globals.css';
 
 const raleway = Raleway({
@@ -16,6 +17,7 @@ const shippori = Shippori_Mincho({
 	weight: ['400', '500', '600', '700'],
 	display: 'swap',
 	variable: '--font-shippori',
+	subsets: ['latin'],
 });
 
 const hikka = localFont({
@@ -52,6 +54,7 @@ export default async function RootLayout({
 				>
 					<Header />
 					<main className="flex h-full min-h-screen flex-col">{children}</main>
+					<Toaster/>
 				</ThemeProvider>
 			</body>
 		</html>
