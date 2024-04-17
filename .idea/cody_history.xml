@@ -160,6 +160,321 @@
             </llm>
           </llm>
         </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="39ca92e5-ca12-42e5-9d26-9c472e07ebe0" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="1d0c7884-6e98-4be3-b658-d3b6f35cdb06" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="12d2c99b-cdfd-488b-941d-86efc16f83d5" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="26e7ccf9-5f8c-45d5-8723-b44b15617670" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="a8ab69db-2695-42df-b694-fb38de16dbc9" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="ed54dee5-4faf-4981-9e09-6c90d685e372" />
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="Explain what @\\e:\hikikomorikai-renewed\hikikomori-frontend\components\add-to-cart-animation.tsx:1-16  does in simple terms. Assume the audience is a beginner programmer who has just learned the language features and basic syntax. Focus on explaining: 1) The purpose of the code 2) What input(s) it takes 3) What output(s) it produces 4) How it achieves its purpose through the logic and algorithm. 5) Any important logic flows or data transformations happening. Use simple language a beginner could understand. Include enough detail to give a full picture of what the code aims to accomplish without getting too technical. Format the explanation in coherent paragraphs, using proper punctuation and grammar. Write the explanation assuming no prior context about the code is known. Do not make assumptions about variables or functions not shown in the shared code. Start the answer with the name of the code that is being explained." />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value="This is code for an AddedToCartAnimation component in React/TypeScript.&#10;&#10;The purpose of this component is to show an animated &quot;+1&quot; notification when an item is added to the shopping cart. &#10;&#10;It takes one input prop called isVisible which is a boolean that controls whether the animation is visible or hidden.&#10;&#10;The output is the animated &quot;+1&quot; notification itself rendered on the page.&#10;&#10;The main logic is:&#10;- Use Framer Motion for the animation by wrapping a &lt;motion.div&gt; around the &quot;+1&quot; text&#10;- Initially set the opacity to 0 and position off screen &#10;- When isVisible is true, animate the opacity to 1 and position on screen&#10;- When isVisible is false, animate the opacity back to 0 and position off screen&#10;&#10;This allows the notification to smoothly fade in and slide up from the bottom when an item is added to cart. And fade out and slide back down when it should disappear.&#10;&#10;The key data transformation is the isVisible prop being used to determine the values for opacity and position in the animation.&#10;&#10;So in summary, this React component handles displaying an animated notification when an item is added to the shopping cart, by using Framer Motion and reacting to the isVisible prop. The logic flows between hidden and visible states by animating opacity and screen position." />
+              </message>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="типизируй isVisible под boolean" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value="Here is the TypeScript code with isVisible typed as a boolean:&#10;&#10;```typescript&#10;'use client'&#10;&#10;import { motion } from 'framer-motion';&#10;&#10;interface Props {&#10;  isVisible: boolean;&#10;}&#10;&#10;const AddedToCartAnimation = ({ isVisible }: Props) =&gt; {&#10;  return (&#10;    &lt;motion.div&#10;      initial={{ opacity: 0, y: 20 }}&#10;      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? -50 : 20 }}&#10;      transition={{ duration: 0.5 }}&#10;      className=&quot;absolute bottom-20 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full&quot;&#10;    &gt;&#10;      +1&#10;    &lt;/motion.div&gt;&#10;  );&#10;};&#10;```&#10;&#10;The key changes:&#10;&#10;- Define a Props interface with isVisible typed as a boolean&#10;- Update the component signature to add :Props annotation &#10;- This ensures isVisible will be the correct type&#10;&#10;Let me know if you need any clarification on the typing!" />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-04-12T16:30:53.2910908" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="8f2e05dc-c603-4a42-ab92-03a1256f4bf7" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="e3968f01-ccaa-4e85-96a2-091e9b28c972" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="a4d8f20c-131b-4179-b6e0-a7ce87f9d97d" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="bea70629-ecb9-473e-b83a-99663ef46ba9" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="0d7c7e20-165d-4f9f-8de6-cfe4ead8260f" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="da629738-1a5a-4fa5-a7c8-169316cc8c4a" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="810ba097-b85e-4dc5-bfb2-6e6a2188c1b9" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozODIyMjg=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/ssilvertt/hikikomorikai-renewed" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="eaced8c6-c968-4256-b6fd-f14e4adb69de" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>
