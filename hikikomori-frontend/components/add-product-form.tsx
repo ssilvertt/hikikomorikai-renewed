@@ -10,12 +10,16 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import axios from '@/lib/axios';
+import axios from '@/util/axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Config, readAndCompressImage } from 'browser-image-resizer';
+import {
+	useRouter
+} from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useToast } from '@/components/ui/use-toast';
 
 const formSchema = z.object({
 	name: z.string({
@@ -39,7 +43,10 @@ export default function AddProductForm() {
 
 	const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 	const [descriptionArea, setDescription] = useState('');
-
+	const { toast } = useToast();
+	const router = useRouter();
+	const delay = (ms: number | undefined) =>
+		new Promise(res => setTimeout(res, ms));
 	const handleDescriptionChange: React.ChangeEventHandler<
 		HTMLTextAreaElement
 	> = event => {
@@ -61,10 +68,9 @@ export default function AddProductForm() {
 						};
 
 						const resizedImage = await readAndCompressImage(file, config);
-						const compressedFile = new File([resizedImage], file.name, {
+						return new File([resizedImage], file.name, {
 							type: file.type,
 						});
-						return compressedFile;
 					} catch (error) {
 						console.error(error);
 						return file; // Return the original file if compression fails
@@ -88,6 +94,15 @@ export default function AddProductForm() {
 			const response = await axios.post('http://localhost:8000/api/products', {
 				...values,
 			});
+
+			if (response.status == 201) {
+				toast({
+					description: "New product added successfully",
+				})
+				
+				await delay(3000);
+				router.push('/');
+			}
 		} catch (error) {
 			console.log('Catch: ', error);
 		}
