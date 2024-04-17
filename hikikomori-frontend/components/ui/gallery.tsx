@@ -1,6 +1,6 @@
 'use client';
 
-import { ProductImage } from '@/lib/definitions';
+import { ProductImage } from '@/util/definitions';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import LightGallery from 'lightgallery/react';
