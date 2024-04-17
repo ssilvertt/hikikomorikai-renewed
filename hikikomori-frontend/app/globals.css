@@ -65,5 +65,13 @@
 }
 
 .card {
-	transition: all 0.1s linear;
+	
+	will-change: filter, transform;
+	
+	transition: filter 0.1s, transform 0.1s;
+}
+
+.card:hover {
+	border-color: rgb(185 28 28);
+	filter: drop-shadow(0 0 2em rgb(185 28 28));
 }
