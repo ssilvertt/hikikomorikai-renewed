@@ -1,5 +1,5 @@
-import axios from '@/lib/axios';
-import { SetErrors, SetStatus } from '@/lib/definitions';
+import axios from '@/util/axios';
+import { SetErrors, SetStatus } from '@/util/definitions';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import useSWR from 'swr';
