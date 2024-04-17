@@ -1,15 +1,17 @@
 'use client';
 import Gallery from '@/components/ui/gallery';
 import { LampContainer } from '@/components/ui/lamp';
-import type { ApiProduct } from '@/lib/definitions';
+import type { ApiProduct } from '@/util/definitions';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
+import { useCartStore } from "@/store/cart";
 interface ProductContentProps {
 	product: ApiProduct;
 }
 
 export function ProductContent({ product }: ProductContentProps) {
+	const {add: handleAddToCart} = useCartStore();
+	
 	return (
 		<LampContainer>
 			<motion.div
@@ -44,9 +46,15 @@ export function ProductContent({ product }: ProductContentProps) {
 							__html: product.description.replace(/\r\n/g, '<br>'),
 						}}
 					/>
-					<div className="font-hikika mb-60">
+					<div className="font-hikika ">
 						{Number(product.price).toFixed(0)}$
 					</div>
+					
+					<button onClick={() => handleAddToCart(product)} className="mb-60 mt-7 inline-flex text-md h-18 animate-shimmer items-center justify-center rounded-xl border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-10 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+						Buy
+					</button>
+					
+				
 				</div>
 			</motion.div>
 		</LampContainer>
