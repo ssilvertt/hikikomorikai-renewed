@@ -1,3 +1,6 @@
+'use client';
+
+import { CartButton } from '@/components/ui/cart-button';
 import {
 	Drawer,
 	DrawerContent,
@@ -40,9 +43,9 @@ export default function Header() {
 						</li>
 					</ul>
 					<div className="flex gap-x-4">
-						<BsBag className="h-5 w-5 hover:text-red-600 cursor-pointer" />
+						<CartButton />
 						<Drawer>
-							<DrawerTrigger asChild>
+							<DrawerTrigger>
 								<RxHamburgerMenu className="visible md:hidden h-6 w-6" />
 							</DrawerTrigger>
 							<DrawerContent className="">
