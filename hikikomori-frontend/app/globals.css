@@ -69,9 +69,25 @@
 	will-change: filter, transform;
 	
 	transition: filter 0.1s, transform 0.1s;
+	
+	filter: drop-shadow(0 0 1em #3d0e0a);
 }
 
 .card:hover {
 	border-color: rgb(185 28 28);
-	filter: drop-shadow(0 0 2em rgb(185 28 28));
+	filter: drop-shadow(0 0 1em rgb(185 28 28));
+}
+
+*{
+	outline: 0 !important;
+}
+
+
+*:focus{
+	outline: 0 !important;
+}
+
+
+*:active{
+	outline: 0 !important;
 }
