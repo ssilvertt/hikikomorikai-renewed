@@ -8,19 +8,19 @@ async function getProducts() {
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
 	}
-	
+
 	return res.json();
 }
 
 export default async function Home() {
 	const products: ApiProduct[] = await getProducts();
-	
+
 	return (
 		<AuroraBackground>
-			<div className="z-20">
+			<div className="z-20 translate-y-48 md:translate-y-0 md:mt-10">
 				<div>
-					<div className="mx-auto my-20 flex max-w-7xl flex-col py-5 px-6 lg:px-8">
-						<div className="flex flex-wrap justify-center gap-20">
+					<div className="mx-auto my-20 flex max-w-7xl flex-col px-6 lg:px-8">
+						<div className="flex flex-wrap justify-center gap-y-14 gap-x-44">
 							{products.map(product => (
 								<ProductCard product={product} key={product.id} />
 							))}
