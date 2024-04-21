@@ -13,9 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import axios from '@/util/axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Config, readAndCompressImage } from 'browser-image-resizer';
-import {
-	useRouter
-} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -97,9 +95,9 @@ export default function AddProductForm() {
 
 			if (response.status == 201) {
 				toast({
-					description: "New product added successfully",
-				})
-				
+					description: 'New product added successfully',
+				});
+
 				await delay(3000);
 				router.push('/');
 			}
@@ -112,7 +110,7 @@ export default function AddProductForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className="space-y-8 p-3 md:p-10 dark:bg-zinc-900 light:bg-zinc-300 dark:bg-opacity-30 light:bg-opacity-30 rounded-lg dark:text-zinc-300 light:text-black w-96 md:w-auto"
+				className="space-y-8 p-3 md:p-10 dark:bg-zinc-950 light:bg-zinc-300 dark:bg-opacity-50 light:bg-opacity-30 rounded-lg dark:text-zinc-300 light:text-black w-96 md:w-auto"
 			>
 				<FormField
 					control={form.control}
