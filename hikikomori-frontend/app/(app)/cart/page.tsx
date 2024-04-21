@@ -28,12 +28,9 @@ export default function Cart() {
 				</div>
 			</div>
 
-			<Link
-				href="/checkout"
-				className="inline-flex w-48 mx-auto font-hikika text-3xl h-14 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-			>
+			<button className="flex justify-center align-middle w-48 mx-auto font-hikika text-3xl h-15 bg-black text-red-300 border border-red-300 hover:border-red-700 font-medium py-2 px-4 rounded-lg hover:bg-red-600 hover:text-black transition-colors outline-none focus:outline-none active:outline-none focus:ring-2 focus:ring-red-400">
 				Checkout
-			</Link>
+			</button>
 		</div>
 	);
 }
