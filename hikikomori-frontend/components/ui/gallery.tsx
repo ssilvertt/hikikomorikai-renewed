@@ -24,12 +24,14 @@ export default function Gallery({ images }: GalleryProps) {
 			plugins={[lgThumbnail, lgZoom]}
 			thumbnail={false}
 			download={false}
+			
 		>
 			{images.map((image, index) => {
 				return (
 					<a
 						key={index}
 						href={`http://localhost:8000/storage/${image.image_path}`}
+						className='drop-shadow-none'
 					>
 						<Image
 							alt=""
@@ -38,7 +40,8 @@ export default function Gallery({ images }: GalleryProps) {
 							height={80}
 							unoptimized={true}
 							className="h-20 w-20 object-cover rounded-full brightness-50 hover:brightness-150 transition-all
-							drop-shadow-[0_0_2px_#fff] hover:drop-shadow-[0_0_4px_#fff]"
+							drop-shadow-[0_0_4px_#a34d4d]
+							hover:drop-shadow-[0_0_4px_#a34d4d]"
 						/>
 					</a>
 				);
