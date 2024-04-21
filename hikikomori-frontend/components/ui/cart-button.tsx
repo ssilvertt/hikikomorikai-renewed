@@ -10,9 +10,9 @@ export function CartButton() {
 
 	return (
 		<div>
-			<Link href={'/cart'} className="relative">
+			<Link href={'/cart'} className="relative flex align-middle">
 				{count ? (
-					<div className="mb-3">
+					<div className="md:mb-3">
 						<motion.div
 							initial={{ opacity: 0.5, y: 40 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export function CartButton() {
 								duration: 0.8,
 								ease: 'easeInOut',
 							}}
-							className="text-xl drop-shadow-[0_0_3px_#751010] hover:drop-shadow-[0_0_7px_#520b0b] font-hikika md:text-3xl md:text-center text-red-700"
+							className="text-2xl drop-shadow-[0_0_3px_#751010] hover:drop-shadow-[0_0_7px_#520b0b] font-hikika md:text-3xl md:text-center text-red-700 "
 						>
 							{count}
 						</motion.div>
