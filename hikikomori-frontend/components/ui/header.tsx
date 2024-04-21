@@ -27,7 +27,7 @@ export default function Header() {
 						</li>
 						<li>
 							<Link
-								href="/product/1"
+								href="/delievery"
 								className="hover:text-red-600 transition-all"
 							>
 								Delivery
@@ -66,7 +66,7 @@ export default function Header() {
 												</li>
 												<li>
 													<Link
-														href="/product/1"
+														href="/delievery"
 														className="hover:text-red-600 transition-all"
 													>
 														Delivery
